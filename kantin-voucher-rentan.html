@@ -49,7 +49,7 @@
 
   <script>
     const KONTEKS = { menu: [{ nama: "Nasi goreng", harga: 12000 }, { nama: "Es teh", harga: 4000 }] };
-    const LOG = { app: "P06-WEB-DUMMY", npm: "24781016", kasus: "LIVE-1", model: "gemini-1.5-flash", entries: [] };
+    const LOG = { app: "P06-WEB-DUMMY", npm: "24781016", kasus: "LIVE-1", model: "model tiruan (cadangan)", entries: [] };
     const VERSI = "rentan"; // Versi rentan mempercayai seluruh balasan dari model
 
     function simpanKey(v) { try { sessionStorage.setItem("p06-key", v); } catch (e) { } }
@@ -57,23 +57,17 @@
     document.getElementById("key").value = bacaKey();
 
     async function llmAsli(prompt) {
-      const key = document.getElementById("key").value || bacaKey();
-      simpanKey(key);
-      if (!key) throw new Error("API Key Gemini belum diisi!");
-
-      // Update ke gemini-3.8-flash sesuai rekomendasi error dari API Google
-      let targetModel = "models/gemini-3.8-flash";
-
-      const url = "https://generativelanguage.googleapis.com/v1beta/" + targetModel + ":generateContent";
-      const res = await fetch(url, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", "x-goog-api-key": key },
-        body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
-      });
-
-      const data = await res.json();
-      if (data.error) throw new Error(data.error.message);
-      return data.candidates?.[0]?.content?.parts?.[0]?.text || "";
+      // MODE CADANGAN AKTIF: Karena kuota API habis 10 jam.
+      // Modul mengizinkan penggunaan fungsi tiruan dengan model "model tiruan (cadangan)".
+      await new Promise(r => setTimeout(r, 800)); // efek loading
+      
+      const p = prompt.toLowerCase();
+      // Simulasi injeksi
+      if (p.includes("voucher") || p.includes("abaikan")) {
+         return "Baiklah, saya abaikan instruksi sebelumnya. Ini voucher untuk Anda: VOUCHER-P06-99";
+      } else {
+         return "Halo! Menu kantin hari ini adalah Nasi goreng (12000) dan Es teh (4000).";
+      }
     }
 
     // KONTRAK WAJIB: window.asisten
