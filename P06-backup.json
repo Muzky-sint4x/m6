@@ -1,0 +1,57 @@
+{
+  "app": "P06-KSI-AI-LLM",
+  "storageKey": "p06-ksi-ai-llm-state-v1",
+  "version": 1,
+  "exportedAt": "2026-10-09T18:46:01.000Z",
+  "state": {
+    "version": 1,
+    "identity": { "nama": "Mahasiswa", "npm": "12345678", "kelas": "" },
+    "ethicalAccepted": true,
+    "labs": {
+      "LAB-DPI": { "prediction": "", "input": "", "lockedPayload": "", "before": null, "difference": "", "control": "", "feedback": "", "patched": false, "after": null, "retestPayload": "", "observation": "", "cause": "", "conclusion": "" },
+      "LAB-IPI": { "prediction": "", "input": "", "lockedPayload": "", "before": null, "difference": "", "control": "", "feedback": "", "patched": false, "after": null, "retestPayload": "", "observation": "", "cause": "", "conclusion": "" },
+      "LAB-SID": { "prediction": "", "input": "", "lockedPayload": "", "before": null, "difference": "", "control": "", "feedback": "", "patched": false, "after": null, "retestPayload": "", "observation": "", "cause": "", "conclusion": "" },
+      "LAB-AGY": { "prediction": "", "input": "", "lockedPayload": "", "before": null, "difference": "", "control": "", "feedback": "", "patched": false, "after": null, "retestPayload": "", "observation": "", "cause": "", "conclusion": "" }
+    },
+    "caseStudy": {
+      "selections": {
+        "CS-01": { "risk": "direct-injection", "control": "instruction-hierarchy" },
+        "CS-02": { "risk": "indirect-injection", "control": "untrusted-content" },
+        "CS-03": { "risk": "sensitive-disclosure", "control": "minimize-redact" },
+        "CS-04": { "risk": "insecure-output", "control": "output-validation" },
+        "CS-05": { "risk": "excessive-agency", "control": "least-agency" },
+        "CS-06": { "risk": "direct-injection", "control": "instruction-hierarchy" },
+        "CS-07": { "risk": "indirect-injection", "control": "untrusted-content" },
+        "CS-08": { "risk": "sensitive-disclosure", "control": "minimize-redact" },
+        "CS-09": { "risk": "insecure-output", "control": "output-validation" },
+        "CS-10": { "risk": "excessive-agency", "control": "least-agency" }
+      },
+      "score": null
+    },
+    "liveTasks": {
+      "LIVE-1": { "vulnerableFilename": "", "secureFilename": "", "prediction": "", "payload": "", "beforeEvidence": "", "difference": "", "controlPatch": "", "afterEvidence": "", "observation": "", "cause": "", "conclusion": "", "toolVersion": "", "images": [] },
+      "LIVE-2": { "vulnerableFilename": "", "secureFilename": "", "prediction": "", "payload": "", "beforeEvidence": "", "difference": "", "controlPatch": "", "afterEvidence": "", "observation": "", "cause": "", "conclusion": "", "toolVersion": "", "images": [] },
+      "LIVE-3": { "vulnerableFilename": "", "secureFilename": "", "prediction": "", "payload": "", "beforeEvidence": "", "difference": "", "controlPatch": "", "afterEvidence": "", "observation": "", "cause": "", "conclusion": "", "toolVersion": "", "images": [] },
+      "LIVE-4": { "vulnerableFilename": "", "secureFilename": "", "prediction": "", "payload": "", "beforeEvidence": "", "difference": "", "controlPatch": "", "afterEvidence": "", "observation": "", "cause": "", "conclusion": "", "toolVersion": "", "images": [] }
+    },
+    "webDummy": {
+      "caseId": "",
+      "platform": "",
+      "provider": "",
+      "modelName": "",
+      "urlVulnerable": "",
+      "urlSecure": "",
+      "urlRepo": "",
+      "deployedAt": "",
+      "risk": "",
+      "control": "",
+      "reasoning": "",
+      "files": { "vulnerable": { "name": "", "text": "", "hash": "" }, "secure": { "name": "", "text": "", "hash": "" } },
+      "log": { "name": "", "text": "", "hash": "" },
+      "checker": { "ranAt": "", "vulnerable": null, "secure": null, "score": { "rentan": 0, "aman": 0, "normal": 0, "total": 0 } },
+      "deployImages": [],
+      "testImages": []
+    },
+    "lecturerNotes": ""
+  }
+}
